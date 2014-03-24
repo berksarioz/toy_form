@@ -3,9 +3,10 @@ class ItemsController < ApplicationController
 
   # GET /items
   # GET /items.json
-  def index
-    @items = Item.all
-  end
+
+def index
+  @items = Item.search(params[:search])
+end
 
   # GET /items/1
   # GET /items/1.json
@@ -52,7 +53,7 @@ class ItemsController < ApplicationController
   end
 
   def search
-    
+
   end
 
   # DELETE /items/1

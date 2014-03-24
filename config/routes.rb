@@ -1,4 +1,6 @@
 Lostandfound::Application.routes.draw do
+  resources :turkishes
+
   resources :items
   resources :items do
   collection do

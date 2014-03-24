@@ -11,11 +11,8 @@
     </div>
   <% end %>
 
-  <%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
+
+
 
   <div class="field">
     <%= f.label :title %><br>
@@ -25,10 +22,14 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
-  <div class="field">
-    <%= f.label :type %><br>
-    <%= f.text_field :type %>
-  </div>
+
+  <%#= f.select :item_type_id, @item_types.collect{|p| [p.name, p.id] }, params[:item_type_id] %>
+  <select name="item[type]">
+    <option value="">Please select</option>
+    <option value="Turkish" selected="selected">Turkish</option>
+    <option value="American">American</option>
+    <option value="French">French</option>
+  </select>
   <div class="actions">
     <%= f.submit %>
   </div>

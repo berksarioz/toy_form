@@ -1,0 +1,31 @@
+<h1>Listing turkishes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @turkishes.each do |turkish| %>
+      <tr>
+        <td><%= turkish.title %></td>
+        <td><%= turkish.description %></td>
+        <td><%= turkish.type %></td>
+        <td><%= link_to 'Show', turkish %></td>
+        <td><%= link_to 'Edit', edit_turkish_path(turkish) %></td>
+        <td><%= link_to 'Destroy', turkish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Turkish', new_turkish_path %>

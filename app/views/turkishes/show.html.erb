@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @turkish.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @turkish.description %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @turkish.type %>
+</p>
+
+<%= link_to 'Edit', edit_turkish_path(@turkish) %> |
+<%= link_to 'Back', turkishes_path %>
