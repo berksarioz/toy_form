@@ -7,11 +7,11 @@ class Item < ActiveRecord::Base
     [Turkish, French, American]
   end
 
+
+
+
   def self.search(search)
-    if search
-      find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
-    else
-      find(:all)
-    end
+    search_condition = "%" + search.to_s + "%"
+    find(:all, :conditions => ['title LIKE ? OR description LIKE ?', search_condition, search_condition])
   end
 end

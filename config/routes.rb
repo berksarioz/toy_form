@@ -2,11 +2,12 @@ Lostandfound::Application.routes.draw do
   resources :turkishes
 
   resources :items
+  
   resources :items do
-  collection do
-    get 'search'
+    collection do
+      get 'search'
+    end
   end
-end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

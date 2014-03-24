@@ -53,7 +53,7 @@ end
   end
 
   def search
-
+    @search_items = Item.search(params[:search])
   end
 
   # DELETE /items/1
